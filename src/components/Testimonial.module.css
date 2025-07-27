@@ -1,0 +1,197 @@
+.testimonials {
+  padding: 8rem 2rem;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  display: block;
+  color: #72ceb9;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  color: #303030;
+}
+
+.carousel {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.navButton {
+  background: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  z-index: 2;
+  color: #303030;
+}
+
+.navButton:hover {
+  background: #72ceb9;
+  color: white;
+  transform: scale(1.1);
+}
+
+.sliderWrapper {
+  width: 100%;
+  max-width: 800px;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonialCard {
+  background: #72ceb9;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.quoteContainer {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.quoteIcon {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+  color: #72ceb9;
+}
+
+.quote {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  font-style: italic;
+  padding-left: 2rem;
+}
+
+.clientInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.clientName {
+  font-size: 1.2rem;
+  color: #303030;
+  margin-bottom: 0.5rem;
+}
+
+.clientCompany {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.projectTag {
+  background: #f0f0f0;
+  color: #72ceb9;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  border: non;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+    border: none;
+  background: #72ceb9;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 6rem 1.5rem;
+  }
+  
+  .carousel {
+    gap: 1rem;
+  }
+  
+  .testimonialCard {
+    padding: 2rem;
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonialCard {
+    padding: 1.5rem;
+  }
+  
+  .clientInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .quoteIcon {
+    width: 40px;
+    height: 40px;
+    left: -10px;
+  }
+}

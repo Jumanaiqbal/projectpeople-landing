@@ -1,0 +1,39 @@
+
+
+:root {
+  /* Primary Colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-cyan-muted: #72CEB9;
+
+  /* Secondary Colors */
+  --color-gray-light: #EFEFEF;
+  --color-cyan-bright: #3FC0E8;
+  --color-gray-dark: #303030;
+
+  /* Font Sizes */
+  --font-base: 16px;
+  --font-sm: 14px;
+  --font-lg: 20px;
+  --font-xl: 32px;
+  --font-xxl: 48px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: var(--font-base);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}

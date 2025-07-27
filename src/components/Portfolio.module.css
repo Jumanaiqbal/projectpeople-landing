@@ -1,0 +1,251 @@
+.portfolio {
+  
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  overflow: hidden;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+}
+
+.backgroundParallax {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(114, 206, 185, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.subtitle {
+  display: block;
+  color: #72ceb9;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.2;
+  color: #72ceb9;
+  font-weight: 500;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  min-height: 600px;
+}
+
+.leftLayout .imageContainer {
+  order: 1;
+}
+
+.leftLayout .content {
+  order: 2;
+  padding-left: 2rem;
+}
+
+.rightLayout .imageContainer {
+  order: 2;
+}
+
+.rightLayout .content {
+  order: 1;
+  padding-right: 2rem;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.12);
+  height: 500px;
+  cursor: pointer;
+}
+
+.imageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(114, 206, 185, 0.1) 0%, transparent 100%);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.imageContainer:hover::before {
+  opacity: 1;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.imageContainer:hover img {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.imageContainer:hover .imageOverlay {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+}
+
+.category {
+  display: inline-block;
+  background: linear-gradient(135deg, #72ceb9, #4a9d8e);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(114, 206, 185, 0.3);
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.projectMeta {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.location, .year {
+  font-size: 0.9rem;
+  color: #72ceb9;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  background: rgba(114, 206, 185, 0.1);
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .project {
+    gap: 4rem;
+  }
+  
+  .leftLayout .content {
+    padding-left: 1rem;
+  }
+  
+  .rightLayout .content {
+    padding-right: 1rem;
+  }
+  
+  .imageContainer {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 6rem 0;
+  }
+  
+  .project {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    min-height: auto;
+  }
+  
+  .leftLayout .content,
+  .rightLayout .content {
+    padding: 0;
+    order: 2;
+  }
+  
+  .leftLayout .imageContainer,
+  .rightLayout .imageContainer {
+    order: 1;
+  }
+  
+  .imageContainer {
+    height: 350px;
+  }
+
+  .projectsContainer {
+    gap: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .header {
+    margin-bottom: 6rem;
+  }
+  
+  .imageContainer {
+    height: 280px;
+  }
+  
+  .content h3 {
+    font-size: 2rem;
+  }
+
+  .projectsContainer {
+    gap: 6rem;
+  }
+}

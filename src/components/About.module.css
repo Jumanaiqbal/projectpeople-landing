@@ -1,0 +1,115 @@
+
+.about {
+  padding: 5rem 2rem;
+  background: var(--color-white);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  display: block;
+  color: var(--color-cyan-bright);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  opacity: 0.9;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+
+.card {
+  padding: 2.5rem;
+  border-radius: 8px;
+  background: var(--color-gray-light);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: var(--color-cyan-bright);
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-gray-dark);
+}
+
+.card p {
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  opacity: 0.9;
+}
+
+.expertiseList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.expertiseList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.expertiseList li::before {
+  content: "•";
+  color: var(--color-cyan-bright);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+@media (max-width: 768px) {
+  .about {
+    padding: 5rem 1.5rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    padding: 2rem;
+  }
+}
